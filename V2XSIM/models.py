@@ -17,11 +17,10 @@ class Test(models.Model):
 class Node(models.Model):
 
     name = models.CharField(max_length=200)
-    can_send = models.BooleanField()
-    can_recieve = models.BooleanField()
+    node_type = models.IntegerField()
 
     def __str__(self):
-        return "Node %s" % self.name
+        return 'Node %s' % self.name
 
 class SceneConfig(models.Model):
 
